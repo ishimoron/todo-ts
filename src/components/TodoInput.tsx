@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { TodoProps } from "../modules/Todo";
+import { TodoProps } from "../assets/modules/Todo";
 import { useTheme } from "../context/ThemeContext";
 
 interface TodoInputProps {

@@ -10,11 +10,7 @@ import DisplayTodo from "./DisplayTodo";
 import { TodoProps } from "../assets/modules/Todo";
 import { useTheme } from "../context/ThemeContext";
 
-interface Todo {
-  addTodo: (todo: string) => void;
-}
-
-const Todo: React.FC<Todo> = () => {
+const Todo: React.FC = () => {
   const [todos, setTodos] = useState<
     { id: string; text: string; completed: boolean }[]
   >([]);

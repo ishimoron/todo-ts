@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "react-beautiful-dnd";
 import { TodoProps } from "../assets/modules/Todo";
 import { RxCross1 } from "react-icons/rx";
 import { useTheme } from "../context/ThemeContext";
@@ -32,7 +37,7 @@ const DisplayTodo: React.FC<Todos> = ({
   useEffect(() => {
     setCurrentTodo(todos);
   }, [todos]);
-  const handleDragEnd = (result) => {
+  const handleDragEnd = (result: DropResult) => {
     if (!result.destination) return;
     reorderTodos(result.source.index, result.destination.index);
   };

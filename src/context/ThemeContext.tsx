@@ -17,7 +17,7 @@ export function useTheme() {
 
 interface ThemeProviderProps {
   children: ReactNode;
-  value: ThemeContextType;
+  value?: ThemeContextType;
 }
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
